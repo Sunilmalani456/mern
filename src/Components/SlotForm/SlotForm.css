@@ -1,0 +1,35 @@
+.SlotForm_box{
+    width: 300px;
+    height: 200px;
+    box-shadow: 0 0 6px #aaaaaa7d;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+.timeSlotBox{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.SlotForm_box h5{
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.timeSlotBox h6{
+    font-size: 0.8rem;
+    color: rgb(85, 85, 85)
+}
+
+
+
+.SlotForm_box button{  
+    background-color: #0094ff;
+    border-radius: 5px;
+    padding: 8px 20px;
+    color: white;
+    font-weight: 600;
+    margin-top: 20px;
+    width: 100%;
+}

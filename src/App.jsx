@@ -1,11 +1,11 @@
-import Admin from "./pages/admin/admin";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+// import Admin from "./pages/admin/admin";
+// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import { Import } from "lucide-react"
 import { Button } from "./Components/ui/button"
 import PageLayout from "./PageLayout"
 // import router from "./router.js"
-import { RouterProvider } from "react-router-dom"
+// import { RouterProvider } from "react-router-dom"
 import { Routes, Route } from "react-router-dom"
 import Home from "./Pages/Home"
 import Navbar from "./Components/Navbar/Navbar"
@@ -13,6 +13,8 @@ import LoginSignup from "./Components/LoginSignup/LoginSignup"
 import Doctorslist from "./Pages/Doctorslist"
 import BookAppointments from "./Pages/BookAppointments"
 import Contact from "./Pages/Contact"
+import DoctorDetail from "./Pages/DoctorDetail"
+import Footer from "./Components/Footer/Footer"
 
 
 function App() {
@@ -24,9 +26,11 @@ function App() {
         <Route path="/" element={<Home/>}/>
         <Route path="/login" element={<LoginSignup/>}/>
         <Route path="/doctorlist" element={<Doctorslist/>}/>
+        <Route path="/doctorDetail" element={<DoctorDetail/>}/>
         <Route path="/bookAppointments" element={<BookAppointments/>}/>
         <Route path="/contact" element={<Contact/>}/>
       </Routes>
+      <Footer/>
     </>
   )
 //     <div>App</div>
