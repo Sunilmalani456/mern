@@ -15,6 +15,8 @@ import BookAppointments from "./Pages/BookAppointments"
 import Contact from "./Pages/Contact"
 import DoctorDetail from "./Pages/DoctorDetail"
 import Footer from "./Components/Footer/Footer"
+import Profile from "./Pages/Profile"
+import Signup from "./Components/Signup/Signup"
 
 
 function App() {
@@ -25,10 +27,12 @@ function App() {
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/login" element={<LoginSignup/>}/>
+        <Route path="/register" element={<Signup/>}/>
         <Route path="/doctorlist" element={<Doctorslist/>}/>
         <Route path="/doctorDetail" element={<DoctorDetail/>}/>
         <Route path="/bookAppointments" element={<BookAppointments/>}/>
         <Route path="/contact" element={<Contact/>}/>
+        <Route path="/profile/me" element={<Profile/>}/>
       </Routes>
       <Footer/>
     </>

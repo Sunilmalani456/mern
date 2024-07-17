@@ -13,6 +13,7 @@
     
 }
 
+
 .logo{
     font-size: 32px;
     color: white;
@@ -21,7 +22,7 @@
 .navLinks{
     display: flex;
     gap: 30px;
-    /* align-items: center; */
+    
 }
 
 .navLinks li{
@@ -50,49 +51,16 @@
 
 .active{
     border-bottom: 1px solid black;
+    color: rgb(52, 52, 52);
 }
 
-/* @media screen and (max-width:1024px){
-    .logo{
-        font-size: 32px;
-        color: black;
-    }
 
+
+@media screen and (max-width:768px) {
    
-} */
-
-/* @media screen and (max-width:1024px) and (min-width:768px){
-    .navbar{
-        max-width: 800px;
-    }
-} */
-
-/* @media screen and (max-width:767px) and (min-width:425px){
-    .navbar{
-        max-width: 650px;
-    }
-
-    .navLinks{
-        display: flex;
-        gap: 30px;
-        font-size: 12px;
-    }
-} */
-
-/* @media only screen and (min-width: 768px){
-    .navbar{
-        max-width: 650px;
-    }
 }
 
-@media only screen and (min-width: 992px){
-    .navbar{
-        max-width: 950px;
-    }
+@media screen and (max-width:600px) {
+   
 }
 
-@media only screen and (min-width: 600px){
-    .navbar{
-        width: 500px;
-    }
-} */

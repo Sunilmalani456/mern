@@ -11,16 +11,40 @@ const BookAppointmentForm = () => {
           </div>
           <div>
             <form action="">
-                {/* <div className='inputDiv'>
-                    <div class="mb-3">
+                <div className='inputDiv'>
+                    <div class="mb-3 inputDivBox">
                         <label for="exampleInputPassword1" className="form-label">Name</label>
                         <input type="password" className="form-control" id="exampleInputPassword1"/>
                     </div>
-                    <div class="mb-3">
+                    <div class="mb-3 inputDivBox">
                         <label for="exampleInputPassword1" className="form-label">Email</label>
                         <input type="password" className="form-control" id="exampleInputPassword1"/>
                     </div>
-                </div> */}
+                </div>
+
+                <div className='inputDiv'>
+                    <div class="mb-3 inputDivBox">
+                        <label for="exampleInputPassword1" className="form-label">Phone</label>
+                        <input type="password" className="form-control" id="exampleInputPassword1"/>
+                    </div>
+                    <div class="mb-3 inputDivBox">
+                        <label for="exampleInputPassword1" className="form-label">Doctor</label>
+                        <input type="password" className="form-control" id="exampleInputPassword1"/>
+                    </div>
+                </div>
+
+                <div className='inputDiv'>
+                    <div class="mb-3 inputDivBox">
+                        <label for="exampleInputPassword1" className="form-label">Appointment Date</label>
+                        <input type="password" className="form-control" id="exampleInputPassword1"/>
+                    </div>
+                    <div class="mb-3 inputDivBox">
+                        <label for="exampleInputPassword1" className="form-label">Appointment Time</label>
+                        <input type="password" className="form-control" id="exampleInputPassword1"/>
+                    </div>
+                </div>
+
+                <button className='bookButton'>Book</button>
                 
             </form>
           </div>

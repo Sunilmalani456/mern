@@ -15,7 +15,7 @@ function Navbar() {
               <div>
                  <FaUserDoctor  className='logo'/>
               </div>
-              <div>
+              <div className='links'>
                   <ul className='navLinks'>
                     <li className={activeLink === "home"? "": "navlink_option"}><NavLink to="/" onClick={()=>setActiveLink("home")} className="navlink_option">Home</NavLink></li>
                     <li className={activeLink === "doctors"?"": "navlink_option"}><NavLink to="/doctorlist" className="navlink_option" onClick={()=>setActiveLink("doctors")}>Doctors</NavLink></li>
