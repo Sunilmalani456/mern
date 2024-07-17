@@ -2,7 +2,7 @@ import React from 'react'
 import './DoctorTeam.css'
 import doctorImage3 from "../../assets/doctor3.jpg"
 import { NavLink } from 'react-router-dom'
-import Button from '../Button/Button'
+
 
 
 function DoctorTeam() {

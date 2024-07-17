@@ -1,45 +1,52 @@
 import React, { useState } from 'react'
 import "./LoginSignup.css"
+import { NavLink } from 'react-router-dom'
+import axios from 'axios'
+
 
 function LoginSignup() {
 
-    const [loginState, setLoginState] = useState("Login")
+    
+
+    const [loginData, setLoginData] = useState({
+        email:"",
+        password:""
+    })
+
+    function handleLoginInput (e) {
+      const {name, value} = e.target;
+      setLoginData({...loginData, [name]:value})
+    }
+
+
+    function submitLogin(e){
+       e.preventDefault()
+    }
+
+    console.log(loginData)
   return (
     <>
        <div className='loginForm'>
            
-            <form className='loginFormBox'>
+            <form className='loginFormBox' onSubmit={submitLogin}>
                 <div className='loginHeading'>
-                    {loginState === "Login"?(<h2>Login</h2>):(<h2>Signup</h2>)}
+                    <h2>Login</h2>
                 </div>
                 
-                {loginState === "Login"? "" :
-                    <div class="mb-3">
-                        <label for="exampleInputEmail1" className="form-label">Username</label>
-                        <input type="text" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
-                    </div>
-                }
-                <div class="mb-3">
-                    <label for="exampleInputPassword1" className="form-label">Email</label>
-                    <input type="password" className="form-control" id="exampleInputPassword1"/>
+                <div className="mb-3">
+                    <label for="email" className="form-label">Email</label>
+                    <input type="email" name='email' value={loginData.email} onChange={handleLoginInput} className="form-control" id="email"/>
                 </div>
-                <div class="mb-3">
-                    <label for="exampleInputPassword1" className="form-label">Password</label>
-                    <input type="password" className="form-control" id="exampleInputPassword1"/>
+                <div className="mb-3">
+                    <label for="password" className="form-label">Password</label>
+                    <input type="password" name='password' value={loginData.password} onChange={handleLoginInput}  className="form-control" id="password"/>
                 </div>
 
-                {loginState === "Login"?
-                   <button type="submit" className='loginSubmitBtn'>Login</button>:
-                   <button type="submit" className='loginSubmitBtn'>Register</button>
-                }
+                
+                   <button type="submit" className='loginSubmitBtn'>Login</button>
 
-                <div className='signupLinkDiv'>
-                    {
-                       loginState === "Login"? 
-                       <p onClick={()=>setLoginState("Signup")}>Don't have an account? <span>Register</span></p>:
-                       <p onClick={()=>setLoginState("Login")}>Already have an account? <span>Login</span></p>
-                    }
-                    
+                <div className='signupLinkDiv'>                    
+                    <p >Already have an account? <NavLink to="/register"><span>Register</span></NavLink></p>                                        
                 </div>
             </form>
          

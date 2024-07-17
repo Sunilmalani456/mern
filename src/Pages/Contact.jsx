@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./Contact.css"
 import { FaLocationDot } from "react-icons/fa6";
 import { IoMdCall } from "react-icons/io";
@@ -7,6 +7,28 @@ import { IoIosMail } from "react-icons/io";
 
 
 const Contact = () => {
+
+    const [contactForm, setContactForm] = useState({
+        username : "",
+        email :"",
+        message:""
+    })
+
+
+    function handleInput (e){
+        const {name, value} = e.target
+        setContactForm({...contactForm, [name]:value})
+    }
+
+    function submitContactForm(e){
+            e.preventDefault()
+            console.log("Form Submit")
+        axios.post()
+    }
+
+    console.log(contactForm)
+
+
   return (
     <>
     <div className='contact'>
@@ -48,18 +70,18 @@ const Contact = () => {
                 </div>
 
                  <div className='right_section'>
-                 <form>
+                 <form className='loginFormBox' onSubmit={submitContactForm}>
                     <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Full Name</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
+                        <label for="exampleInputName"  className="form-label">Full Name</label>
+                        <input type="name" class="form-control" name='username' value={contactForm.username} onChange={handleInput} id="exampleInputName" aria-describedby="emailHelp"/>
                     </div>
                     <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">Email</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1"/>
+                        <label for="exampleInputEmail" class="form-label">Email</label>
+                        <input type="email" class="form-control" name='email' value={contactForm.email} onChange={handleInput} id="exampleInputEmail"/>
                     </div>
                     <div class="mb-3">
                        <label for="floatexampleInputPassword1ingTextarea" class="form-label">Message</label>
-                        <textarea class="form-control" placeholder="Leave a comment here" id="exampleInputPassword1"></textarea>                       
+                        <textarea class="form-control" placeholder="Leave a comment here" value={contactForm.message} onChange={handleInput} name='message' id="floatexampleInputPassword1ingTextarea"></textarea>                       
                     </div>
                     <button type="submit" class="contactButton">Send</button>
                 </form>
