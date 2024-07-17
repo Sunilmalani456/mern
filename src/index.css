@@ -1,4 +1,22 @@
-@tailwind base;
+ @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; 
   
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* h4{
+    font-size: 12px;
+    font-weight: 600;
+    color: rgb(57, 57, 57);
+} */
+
+@layer utilities {
+    .input {
+        @apply outline-none border-sky-500 border-[1px] p-2 h-[40px] focus-visible:ring-sky-500  focus-visible:ring-1 focus-visible:ring-offset-1 focus-visible:ring-offset-sky-500 !important;
+      }
+}
