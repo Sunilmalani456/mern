@@ -8,7 +8,7 @@ function LoginSignup() {
     <>
        <div className='loginForm'>
            
-            <form>
+            <form className='loginFormBox'>
                 <div className='loginHeading'>
                     {loginState === "Login"?(<h2>Login</h2>):(<h2>Signup</h2>)}
                 </div>

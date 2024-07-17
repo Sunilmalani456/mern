@@ -1,0 +1,92 @@
+.doctorProfile_container{
+    width: 90vw;
+    margin: 30px auto;
+}
+.DoctorProfile{
+    width: 70%;
+}
+
+.DoctorProfile h4{
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+.DoctorProfile p{
+    font-size: 0.8rem;
+}
+
+.DoctorProfile span{
+   color: #0094ff;
+}
+
+.about_section{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin: 30px 0px;
+}
+.experience_box{
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+}
+
+.experience_div{
+    background-color: #a7d9f640;
+    border-radius: 5px;
+    width: 45%;
+    padding: 5px 10px;
+    
+}
+
+
+.experience_div h5, .education_box h5{
+   font-size: 0.8rem;
+}
+
+.experience_div h6, .education_box h6{
+    font-size: 0.7rem;
+    color: rgb(57, 57, 57);
+    
+}
+
+.experience_year{
+    color:  #0094ff;
+}
+
+.education_box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #a7d9f640;
+    margin-bottom: 5px;
+    padding: 5px 10px;
+}
+
+.doctor_img{
+     width: 15vw;
+    height: 186px;
+    background-image: url("../../assets/doctor1.avif");
+    background-position: top center;
+    margin-bottom: 20px;
+}
+
+.doctor_profile_div{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-bottom: 1px solid #a7d9f640;
+}
+.doctor_profile_bg{
+    background-color: #a7d9f640;
+    border-radius: 5px;
+    padding: 5px 5px;
+    color: #0094ff;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.doctor_profile_div p{
+    font-size: 0.8rem;
+    color: rgb(85, 85, 85);
+}

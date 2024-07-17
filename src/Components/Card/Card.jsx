@@ -25,8 +25,7 @@ function Card() {
           <div className="card-body">
             <h5 className="card-title">Dr. John </h5>
             <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <NavLink to="/bookAppointments"><button className='viewDoctor'>Get Appointment</button></NavLink> 
-          </div>
+            <NavLink to="/doctorDetail"><button className='viewDoctor'>Profile</button></NavLink>           </div>
         </div>
 
         <div class="card" style={{width: "18rem"}}>
@@ -34,7 +33,7 @@ function Card() {
           <div className="card-body">
             <h5 className="card-title">Dr. John </h5>
             <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <NavLink to="/bookAppointments"><button className='viewDoctor'>Get Appointment</button></NavLink> 
+            <NavLink to="/doctorDetail"><button className='viewDoctor'>Profile</button></NavLink> 
           </div>
         </div>
 
@@ -43,7 +42,7 @@ function Card() {
           <div className="card-body">
             <h5 className="card-title">Dr. John </h5>
             <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>          
-            <NavLink to="/bookAppointments"><button className='viewDoctor'>Get Appointment</button></NavLink> 
+            <NavLink to="/doctorDetail"><button className='viewDoctor'>Profile</button></NavLink> 
           </div>
         </div>
 
@@ -52,7 +51,7 @@ function Card() {
           <div className="card-body">
             <h5 className="card-title">Dr. John </h5>
             <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>          
-            <NavLink to="/bookAppointments"><button className='viewDoctor'>Get Appointment</button></NavLink> 
+            <NavLink to="/doctorDetail"><button className='viewDoctor'>Profile</button></NavLink> 
           </div>
         </div>
 
@@ -61,7 +60,7 @@ function Card() {
           <div className="card-body">
             <h5 className="card-title">Dr. John </h5>
             <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>          
-            <NavLink to="/bookAppointments"><button className='viewDoctor'>Get Appointment</button></NavLink> 
+            <NavLink to="/doctorDetail"><button className='viewDoctor'>Profile</button></NavLink> 
           </div>
         </div>
       </div>
