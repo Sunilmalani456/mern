@@ -1,0 +1,61 @@
+.heroSection{
+    width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0px;
+    height: calc(100%-60px)
+}
+
+
+.leftSection h1{
+    font-size: 40px;
+    word-wrap: break-word;
+}
+
+.leftSection h4{
+    font-size: 18px;
+    font-weight: 600;
+    color: rgb(57, 57, 57);
+}
+
+.leftSection span{
+    color: #0094ff;
+    font-weight: 600
+}
+
+.leftSection button{
+    background-color: #0094ff;
+    border-radius: 20px;
+    padding: 8px 20px;
+    color: white;
+    font-weight: 600;
+    margin-top: 20px;
+    
+}
+
+.leftSection p{
+    margin-top: 20px;
+    line-break: auto;
+}
+
+.headerImage_background{
+    width: 450px;
+    height: 450px;
+    background-color: #0094ff1c;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.headerImage_background2{
+    width: 410px;
+    height: 410px;
+    background-color: white;
+    border-radius: 50%;
+    background-image: url("../../assets/headerImage.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+}

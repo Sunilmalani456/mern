@@ -1,0 +1,98 @@
+.navbar_section{
+    background-color: #0094ff;
+    width: 100vw;
+    height: 60px;
+}
+
+.navbar{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 10px 0px; */
+}
+
+.logo{
+    font-size: 32px;
+    color: white;
+}
+
+.navLinks{
+    display: flex;
+    gap: 30px;
+    /* align-items: center; */
+}
+
+.navLinks li{
+    color: white ;
+}
+
+
+.navlink_option{
+    color: white;
+    text-decoration: none;
+    transition: 0.5s;
+    
+}
+
+.navlink_option:hover{
+    color: rgb(57, 57, 57);
+}
+
+.loginSignupBtn{
+    background-color: white;
+    border-radius: 20px;
+    padding: 8px 30px;
+    color: #0094ff;
+    font-weight: 600
+}
+
+.active{
+    border-bottom: 1px solid black;
+}
+
+/* @media screen and (max-width:1024px){
+    .logo{
+        font-size: 32px;
+        color: black;
+    }
+
+   
+} */
+
+/* @media screen and (max-width:1024px) and (min-width:768px){
+    .navbar{
+        max-width: 800px;
+    }
+} */
+
+/* @media screen and (max-width:767px) and (min-width:425px){
+    .navbar{
+        max-width: 650px;
+    }
+
+    .navLinks{
+        display: flex;
+        gap: 30px;
+        font-size: 12px;
+    }
+} */
+
+/* @media only screen and (min-width: 768px){
+    .navbar{
+        max-width: 650px;
+    }
+}
+
+@media only screen and (min-width: 992px){
+    .navbar{
+        max-width: 950px;
+    }
+}
+
+@media only screen and (min-width: 600px){
+    .navbar{
+        width: 500px;
+    }
+} */

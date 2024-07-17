@@ -1,0 +1,24 @@
+.footer_section{
+    background-color: #0094ff;
+    width: 100%;
+}
+
+.footer_container{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0px;
+}
+
+.social_icons{
+    color: white;
+    display: flex;
+    gap: 15px;
+    font-size: 25px;
+}
+
+.footer_container p{
+    color: white;
+}
