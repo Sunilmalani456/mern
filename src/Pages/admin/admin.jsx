@@ -1,6 +1,7 @@
 import LeftSidebar from "@/components/shared/leftsidebar";
 import Navbar from "@/components/shared/navbar";
 import React from "react";
+import { Outlet } from "react-router-dom";
 
 const Admin = () => {
   return (
@@ -9,7 +10,10 @@ const Admin = () => {
 
       <div className="flex">
         <LeftSidebar />
-        Admin page
+
+        <section className="flex-1 pt-20">
+          <Outlet />
+        </section>
       </div>
     </div>
   );
