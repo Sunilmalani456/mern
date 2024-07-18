@@ -6,6 +6,8 @@ export function cn(...inputs) {
 }
 
 export const handleHTTPError = (status, message) => {
+  console.log(message, status);
+
   switch (status) {
     case 400:
       toast.error(message || "Invalid/missing fields unsuccessful");
