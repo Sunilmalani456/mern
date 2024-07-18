@@ -1,10 +1,9 @@
-import React from 'react'
-import BookAppointmentForm from '@/Components/BookAppointmentForm/BookAppointmentForm'
+import BookAppointmentForm from "@/components/BookAppointmentForm/BookAppointmentForm";
+import React from "react";
+// import BookAppointmentForm from '@/Components/BookAppointmentForm/BookAppointmentForm'
 
 function BookAppointments() {
-  return (
-    <BookAppointmentForm/>
-  )
+  return <BookAppointmentForm />;
 }
 
-export default BookAppointments
+export default BookAppointments;

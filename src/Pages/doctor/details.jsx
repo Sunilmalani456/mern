@@ -18,6 +18,7 @@ import {
 import { CalendarDays, Clock } from "lucide-react";
 import { TimePickerDemo } from "@/components/ui/time-picker.demo";
 import { useForm } from "react-hook-form";
+import { Button } from "@/components/ui/button";
 
 const Details = () => {
   const { register, handleSubmit, setValue, watch } = useForm();
@@ -106,9 +107,9 @@ const Details = () => {
             </SelectContent>
           </Select>
         </div>
-        <div className="w-full flex justify-center pt-5">
-          <div className="flex flex-col gap-1 w-ful items-centerl max-w-sm">
-            <p>Available From:</p>
+        <div className="w-full flex justify-center items-center pt-5">
+          <div className="flex flex-col w-full max-w-sm">
+            Available From:
             <input
               {...register("availableFrom", { required: true })}
               className="input max-w-[240px] w-full rounded-lg"
@@ -116,7 +117,7 @@ const Details = () => {
               type="time"
             />
           </div>
-          <div className="flex flex-col gap-1 items-center w-full max-w-sm">
+          <div className="flex flex-col w-full max-w-sm">
             Available To:
             <input
               {...register("availableTo", { required: true })}
@@ -127,9 +128,9 @@ const Details = () => {
           </div>
         </div>
 
-        <div className="pt-5 w-full justify-center">
+        <div className="pt-5 w-full justify-center items-center">
           <div className="flex items-center gap-2">
-            <p>Session Count </p>{" "}
+            Session Count
             <Select
               onChange={(e) => handleSlotChange(e.target.value)}
               value={watch("sessionCount")}
@@ -156,35 +157,11 @@ const Details = () => {
           </div>
         </div>
 
-        {/* {watch("sessionCount") > 0 &&
-          Array.from({ length: slot }, (_, index) => (
-            <div key={index} className="w-full flex justify-center pt-5">
-              <p></p>
-              <div className="flex flex-col gap-1 w-ful items-centerl max-w-sm">
-                <p>Start From:</p>
-                <input
-                  {...register(`startFrom[${index}]`, { required: true })}
-                  className="input max-w-[240px] w-full rounded-lg"
-                  aria-label="Time"
-                  type="time"
-                />
-              </div>
-              <div className="flex flex-col gap-1 items-center w-full max-w-sm">
-                Start To:
-                <input
-                  {...register(`startTo[${index}]`, { required: true })}
-                  className="input max-w-[240px] rounded-lg"
-                  aria-label="Time"
-                  type="time"
-                />
-              </div>
-            </div>
-          ))} */}
         {watch("sessionCount") > 0 &&
           Array.from({ length: watch("sessionCount") }, (_, index) => (
             <div key={index} className="w-full flex justify-center pt-5">
               <div className="flex flex-col gap-1 w-full max-w-sm">
-                <p>Start From:</p>
+                Start From:
                 <input
                   {...register(`startFrom[${index}]`, { required: true })}
                   className="input max-w-[240px] w-full rounded-lg"
@@ -192,7 +169,7 @@ const Details = () => {
                   type="time"
                 />
               </div>
-              <div className="flex flex-col gap-1 items-center w-full max-w-sm">
+              <div className="flex flex-col gap-1 w-full max-w-sm">
                 Start To:
                 <input
                   {...register(`startTo[${index}]`, { required: true })}
@@ -204,9 +181,9 @@ const Details = () => {
             </div>
           ))}
       </div>
-      <button type="submit" className="btn mt-5">
+      <Button type="submit" className="button mt-5">
         Submit
-      </button>
+      </Button>
     </form>
   );
 };

@@ -39,7 +39,7 @@ const DoctorRegistration = () => {
   };
 
   return (
-    <div className="pt-20">
+    <div className="pt-4">
       <Banner
         title="Hello Doctor 👨‍⚕️."
         name="Please, Provide Us Your Details..."

@@ -3,7 +3,7 @@ import { Outlet } from "react-router-dom";
 
 const Appointments = () => {
   return (
-    <div className="w-full pt-20">
+    <div className="w-full pt-4">
       <Outlet />
     </div>
   );
