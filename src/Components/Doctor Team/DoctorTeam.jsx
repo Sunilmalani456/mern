@@ -10,6 +10,7 @@ function DoctorTeam() {
   return (
     <>
       <div className='DoctorTeam'>
+       
         <div className='doctorTeamContainer'>
             <div className='doctorTeamHeading'>
                 <h4>Doctor Team</h4>
@@ -18,6 +19,7 @@ function DoctorTeam() {
            
 
              <div className='doctorList'>
+                
                 <div class="card" style={{width: "18rem"}}>
                     <img src={doctorImage3} className="card-img-top" alt="..."/>
                     <div className="card-body">

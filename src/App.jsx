@@ -12,11 +12,15 @@ import Navbar from "./Components/Navbar/Navbar"
 import LoginSignup from "./Components/LoginSignup/LoginSignup"
 import Doctorslist from "./Pages/Doctorslist"
 import BookAppointments from "./Pages/BookAppointments"
-import Contact from "./Pages/Contact"
 import DoctorDetail from "./Pages/DoctorDetail"
 import Footer from "./Components/Footer/Footer"
 import Profile from "./Pages/Profile"
 import Signup from "./Components/Signup/Signup"
+import Prescription from "./Pages/Prescription/Prescription"
+import Contacts from "./Pages/Contacts"
+import Verification from "./Pages/Verification"
+import { ToastContainer, toast } from 'react-toastify';
+  
 
 
 function App() {
@@ -31,10 +35,13 @@ function App() {
         <Route path="/doctorlist" element={<Doctorslist/>}/>
         <Route path="/doctorDetail" element={<DoctorDetail/>}/>
         <Route path="/bookAppointments" element={<BookAppointments/>}/>
-        <Route path="/contact" element={<Contact/>}/>
+        <Route path="/Verification" element={<Verification/>}/>
         <Route path="/profile/me" element={<Profile/>}/>
+        <Route path="/prescription" element={<Prescription/>}/>
+        <Route path="/contacts" element={<Contacts/>}/>
       </Routes>
       <Footer/>
+      <ToastContainer position="top-center"/>
     </>
   )
 //     <div>App</div>
