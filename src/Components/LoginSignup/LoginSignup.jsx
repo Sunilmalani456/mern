@@ -18,12 +18,28 @@ function LoginSignup() {
       setLoginData({...loginData, [name]:value})
     }
 
+    const submitLogin = async (e) => {
+        e.preventDefault()
+        console.log(loginData)
+        try {
+            const response = await fetch("https://backend-sush-vineets-projects-44621f19.vercel.app/api/v1/sign-in",{
+                method: 'POST', 
+                headers: {
+                  'Content-Type': 'application/json',
+                  "Accept" : "application/json"
+                },
+                body: JSON.stringify(loginData)               
+            }
+            )
 
-    function submitLogin(e){
-       e.preventDefault()
+            const res = await response.json()
+            console.log(res);
+            
+        } catch (error) {  
+            console.log(error)          
+        }       
     }
 
-    console.log(loginData)
   return (
     <>
        <div className='loginForm'>
@@ -40,9 +56,7 @@ function LoginSignup() {
                 <div className="mb-3">
                     <label for="password" className="form-label">Password</label>
                     <input type="password" name='password' value={loginData.password} onChange={handleLoginInput}  className="form-control" id="password"/>
-                </div>
-
-                
+                </div>               
                    <button type="submit" className='loginSubmitBtn'>Login</button>
 
                 <div className='signupLinkDiv'>                    

@@ -1,0 +1,17 @@
+/* .container{
+    background-color: aliceblue;
+    width: 500px;
+    height: 500px;
+} */
+
+
+.prescription_div{
+    padding: 20px;
+    margin-bottom: 40px;
+    box-shadow: 0 0 6px #aaaaaa7d;
+}
+
+.text{
+    background-color: #0094ff14;
+    padding: 10px;
+}
