@@ -10,13 +10,12 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Button } from "../ui/button";
+import { useFormContext } from "react-hook-form";
 
-const SelectionOption = ({ data, label, head }) => {
+const SelectionOption = ({ data, label, head, setFields, fieldName }) => {
   const [selectedPrimaryCare, setSelectedPrimaryCare] = useState([]);
 
-  //   const [showStatusBar, setShowStatusBar] = useState([]);
-  //   const [showActivityBar, setShowActivityBar] = useState(false);
-  //   const [showPanel, setShowPanel] = useState(false);
+  // console.log("selectedPrimaryCare", selectedPrimaryCare);
 
   const handlePrimaryCareSelection = (itemId) => {
     if (selectedPrimaryCare.includes(itemId)) {
@@ -24,6 +23,13 @@ const SelectionOption = ({ data, label, head }) => {
     } else {
       setSelectedPrimaryCare([...selectedPrimaryCare, itemId]);
     }
+
+    setFields((prevFields) => ({
+      ...prevFields,
+      [fieldName]: selectedPrimaryCare.includes(itemId)
+        ? selectedPrimaryCare.filter((id) => id !== itemId)
+        : [...selectedPrimaryCare, itemId],
+    }));
   };
 
   const isPrimaryCareSelected = (itemId) => {

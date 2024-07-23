@@ -1,17 +1,16 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
-import './index.css'
-import { RouterProvider } from 'react-router-dom'
-import 'bootstrap/dist/css/bootstrap.css';
-import { BrowserRouter } from 'react-router-dom'
-import 'react-toastify/dist/ReactToastify.css';
- 
+import "bootstrap/dist/css/bootstrap.css";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";
+import App from "./App.jsx";
+import "./index.css";
+import { Toaster } from "./components/ui/sonner.jsx";
+import { UserProvider } from "./provider/userProvider.jsx";
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <BrowserRouter>
-       <App/>
-    </BrowserRouter>    
-  </React.StrictMode>,
-)
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <BrowserRouter>
+    <UserProvider>
+      <App />
+      <Toaster position="top-right" />
+    </UserProvider>
+  </BrowserRouter>
+);

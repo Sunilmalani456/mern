@@ -2,24 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 @layer utilities {
-
-  .nft-gradient {
-    
-    /* background: linear-gradient(101.12deg, #146aeb 27.35%, #20a0d3 99.99%, #1caec8 100%, #1cabc8 100%); */
-  }
-  
   .input {
-    @apply outline-none border-sky-500 border-[1px] p-2 h-[40px] focus-visible:ring-sky-500  focus-visible:ring-1 focus-visible:ring-offset-1 focus-visible:ring-offset-sky-500 !important;
+    @apply outline-none border-sky-500 border-[1px] p-2 h-[40px] focus-visible:ring-sky-500 focus-visible:ring-1 focus-visible:ring-offset-1 focus-visible:ring-offset-sky-500 !important;
   }
-  .button{
+  .textarea {
+    @apply outline-none border-sky-500 border-[1px] p-2 h-[40px] focus-visible:ring-sky-500 focus-visible:ring-0 focus-visible:ring-offset-1 focus-visible:ring-offset-sky-500 !important;
+  }
+  .button {
     @apply bg-sky-600 hover:bg-sky-500/90 !important;
   }
 
