@@ -1,15 +1,15 @@
 import { useData } from "@/provider/constant";
 import { Navigate, Outlet } from "react-router-dom";
 
-const Admin = () => {
+const Doctor = () => {
   const { user, loading, role } = useData();
   if (loading) {
     return <div>Loading...</div>;
   }
 
-  console.log("admin", role);
+  console.log("doctor", role);
 
-  if (role === "ADMIN") {
+  if (role === "DOCTOR") {
     return (
       <div className="w-full relative">
         <Outlet />
@@ -20,4 +20,4 @@ const Admin = () => {
   }
 };
 
-export default Admin;
+export default Doctor;

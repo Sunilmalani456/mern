@@ -11,10 +11,14 @@ import { useForm } from "react-hook-form";
 import { Button } from "@/components/ui/button";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
+import { useData } from "@/provider/constant";
 
 const Verify = () => {
+  const { user } = useData();
   const nevigate = useNavigate();
+  const location = useLocation();
+  console.log(location.state.type);
   const formSchema = z.object({
     email: z.string().email(),
     otp: z
@@ -35,24 +39,48 @@ const Verify = () => {
   });
 
   const handleVerify = async (data) => {
-    const res = await fetch(
-      "https://backend-sush-vineets-projects-44621f19.vercel.app/api/v1/verify-account",
-      {
-        method: "POST",
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
+    let res;
+
+    try {
+      if (location.state.type == "forgot") {
+        res = await fetch(
+          `${import.meta.env.VITE_BASE_URL}/vrfy-chng-pswd-otp`,
+          {
+            method: "PATCH",
+            headers: {
+              Accept: "application/json",
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(data),
+          }
+        );
+      } else {
+        res = await fetch(`${import.meta.env.VITE_BASE_URL}/verify-account`, {
+          method: "POST",
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        });
       }
-    );
 
-    const newData = await res.json();
+      const newData = await res.json();
 
-    if (newData.success === true) {
-      nevigate("/sign-in");
+      if (newData.success === true) {
+        if (user?.role === "ADMIN") {
+          nevigate("/admin/dashboard/all-doctor");
+        }
+
+        nevigate("/log-in", {
+          state: { token: newData.data },
+        });
+      }
+
+      console.log(newData);
+    } catch (error) {
+      console.log(error);
     }
-    console.log(newData);
   };
 
   return (
